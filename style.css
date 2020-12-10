@@ -1,0 +1,116 @@
+:root{
+    --dark-gray : rgb(43, 39, 39);
+    --light-gray: rgb(86, 84, 84);;
+    --light-blue: #40b9fab8;
+    --orange: orange;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.calculator{
+    background-color: var(--dark-gray);
+    width: 88%;
+    max-width: 450px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 3px 13px -1px rgba(0,0,0,0.56); 
+    box-shadow: 1px 3px 13px -1px rgba(0,0,0,0.56);
+}
+
+.output{
+    background-color: white;
+    height: 130px;
+    width: 100%;
+    text-align: right;
+    padding: 18px;
+    font-size: 2rem;
+    position: relative;
+    cursor: not-allowed;
+}
+.calculator p{
+float: left;
+color: var(--orange);
+font-weight: 600;
+}
+.display-1{
+    height: 20px;
+    opacity: 0.3;
+    font-size: 1.3rem;
+    overflow: hidden;
+}
+.display-2{
+    color: var(--orange);
+}
+.display-3{
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    
+    opacity: 0.3;
+
+}
+.input{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+.button{
+    background-color: rgb(43, 39, 39);
+    height: 120px;
+    width: 100%;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    border: 3px solid rgb(57, 54, 54);
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.button:hover{
+    background-color: rgb(31, 30, 30);
+    transition: all 0.2s ease-in-out;
+}
+.btn-0{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+
+.equal{
+    background-color: var(--orange);
+}
+.equal:hover{
+    background-color: #de940b;
+}
+.c, .ce{
+    background-color: var(--light-blue);
+}
+
+.c:hover, .ce:hover{
+    background-color:  #369dd5b8;
+}
+
+.symbol{
+    background-color: var(--light-gray);
+}
+.symbol:hover{
+    background-color: rgb(51, 51, 51);
+}
